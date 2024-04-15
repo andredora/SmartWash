@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, View, Image, SafeAreaView, TouchableOpacity, TextInput, FlatList, ImageBackground } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
+
 export default function App() {
   const [searchQuery, setSearchQuery] = useState('');
   const [filteredData, setFilteredData] = useState([]);
@@ -22,20 +23,24 @@ export default function App() {
 
   const handleOptionPress = (option) => {
     // Implemente a lógica para lidar com o pressionamento das opções
+
   };
 
   return (
-    <SafeAreaView style={styles.container}>
-      <View backgroundColor='#f9f9f9'>
-      <Image source={require('./assets/SmartWash.png')} style={styles.logo} />
+    <>
+      <SafeAreaView style={styles.container}>
+        <View backgroundColor='#f9f9f9'>
+          <Image source={require('./assets/SmartWash.png')} style={styles.logo} />
 
-      <Search_Bar handleSearch={handleSearch} searchQuery={searchQuery} filteredData={filteredData} />
-    
-      <Retangulos ></Retangulos>
+          <Search_Bar handleSearch={handleSearch} searchQuery={searchQuery} filteredData={filteredData} />
 
+          <Retangulos ></Retangulos>
+
+
+        </View>
+      </SafeAreaView>
       <Footer handleOptionPress={handleOptionPress} />
-      </View>
-    </SafeAreaView>
+    </>
   );
 }
 
@@ -49,6 +54,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     height: 80,
     width: 370,
+    marginTop: '20%',
   },
   option: {
     backgroundColor: '#ffffff',
@@ -64,36 +70,36 @@ const styles = StyleSheet.create({
     padding: 10,
     borderBottomWidth: 1,
     borderBottomColor: '#ccc',
-    width:287,
+    width: 287,
     position: 'relative',
   },
-  footer:{
+  footer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     height: 80,
     bottom: 0,
     position: 'fixed',
-    marginTop:85,
+    marginTop: 85,
   },
-  flatList:{
-    position:'absolute',
-    top:110,
-    left:40,
+  flatList: {
+    position: 'absolute',
+    top: 110,
+    left: 40,
     backgroundColor: 'white',
     zIndex: 1,
-    borderRadius:20,
-    paddingLeft:45,
+    borderRadius: 20,
+    paddingLeft: 45,
   },
   Retangulo: {
     height: 180,
     marginHorizontal: 40,
     borderRadius: 20,
-    marginTop:60,
-    position:'relative',
-    bottom:10,
+    marginTop: 60,
+    position: 'relative',
+    bottom: 10,
     overflow: 'hidden', // Para garantir que a imagem não ultrapasse os limites do retângulo
-    shadowColor: '#000',  
-    elevation: 30, 
+    shadowColor: '#000',
+    elevation: 30,
   },
 
   textRetangulo: {
@@ -107,7 +113,7 @@ const styles = StyleSheet.create({
     flex: 1,
     resizeMode: 'cover',
     justifyContent: 'center',
-    
+
   },
   overlay: {
     ...StyleSheet.absoluteFillObject,
@@ -123,22 +129,22 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     marginHorizontal: 35,
     marginTop: 50,
-    marginBottom:10,
+    marginBottom: 10,
     paddingHorizontal: 20,
     fontSize: 20,
-    shadowColor: '#000',  
-    elevation: 30, 
+    shadowColor: '#000',
+    elevation: 30,
   },
   searchIcon: {
     marginRight: 20,
-    
+
   },
 
   searchInput: {
     fontSize: 20,
   },
 
-  icon:{
+  icon: {
     color: '#303030',
   },
 
@@ -146,19 +152,19 @@ const styles = StyleSheet.create({
 
 
 const Search_Bar = ({ handleSearch, searchQuery, filteredData }) => {
-  return(
+  return (
     <View>
       <View style={styles.searchBar}>
-      <Icon name="search" size={30} color="#303030" style={styles.searchIcon} />
-      <TextInput
-        placeholder="Lavandaria ..."
-        placeholderTextColor="#303030" // Altera a cor do placeholder
-        onChangeText={handleSearch}
-        value={searchQuery}
-        style={styles.searchInput} // Adiciona este estilo para personalizar o tamanho da letra do placeholder
-      />
-    </View>
-      <FlatList 
+        <Icon name="search" size={30} color="#303030" style={styles.searchIcon} />
+        <TextInput
+          placeholder="Lavandaria ..."
+          placeholderTextColor="#303030" // Altera a cor do placeholder
+          onChangeText={handleSearch}
+          value={searchQuery}
+          style={styles.searchInput} // Adiciona este estilo para personalizar o tamanho da letra do placeholder
+        />
+      </View>
+      <FlatList
         style={styles.flatList}
         data={filteredData}
         renderItem={({ item }) => (
@@ -169,41 +175,42 @@ const Search_Bar = ({ handleSearch, searchQuery, filteredData }) => {
         keyExtractor={item => item.id.toString()}
       />
     </View>
-    );
+  );
 };
 
-const Retangulos = ({}) => {
-  return(
+const Retangulos = ({ }) => {
+  return (
     <View>
-    <View style={styles.Retangulo}>
-      <ImageBackground source={require('./assets/EncontrarMaquinas.png')} style={styles.backgroundImage}>
-        <View style={styles.overlay}></View>
-        <Text style={styles.textRetangulo}>Encontrar      Lavandarias</Text>
-      </ImageBackground>
+      <View style={styles.Retangulo}>
+        <ImageBackground source={require('./assets/EncontrarMaquinas.png')} style={styles.backgroundImage}>
+          <View style={styles.overlay}></View>
+          <Text style={styles.textRetangulo}>Encontrar      Lavandarias</Text>
+        </ImageBackground>
+      </View>
+      <View style={styles.Retangulo}>
+        <ImageBackground source={require('./assets/taxi.jpeg')} style={styles.backgroundImage}>
+          <View style={styles.overlay}></View>
+          <Text style={styles.textRetangulo}>Transportes</Text>
+        </ImageBackground>
+      </View>
     </View>
-    <View style={styles.Retangulo}>
-      <ImageBackground source={require('./assets/taxi.jpeg')} style={styles.backgroundImage}>
-        <View style={styles.overlay}></View>
-        <Text style={styles.textRetangulo}>Transportes</Text>
-      </ImageBackground>
-    </View>
-    </View>
-    )
+  )
 }
 const Footer = ({ handleOptionPress }) => {
+
   return (
     <View style={styles.footer}>
       <TouchableOpacity style={styles.option} onPress={() => handleOptionPress("Opção 1")}>
-        <Icon name="home" size={35} style={styles.icon}/>
+        <Icon name="home" size={35} style={styles.icon} />
       </TouchableOpacity>
-      <TouchableOpacity style={styles.option} onPress={() => handleOptionPress("Opção 2")}>
-        <Icon name="map" size={25} style={styles.icon}/>
+      <TouchableOpacity style={styles.option} onPress={() => handleOptionPress('MapScreen')}>
+        <Icon name="map" size={25} style={styles.icon} />
       </TouchableOpacity>
       <TouchableOpacity style={styles.option} onPress={() => handleOptionPress("Opção 3")}>
-        <Icon name="list" size={25} style={styles.icon}/>
+        <Icon name="list" size={25} style={styles.icon} />
       </TouchableOpacity>
       <TouchableOpacity style={styles.option} onPress={() => handleOptionPress("Opção 4")}>
-      <Icon name="user" size={25} style={styles.icon}/>
+        <Icon name="user" size={25} style={styles.icon} />
       </TouchableOpacity>
     </View>
   );
