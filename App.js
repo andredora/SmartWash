@@ -6,9 +6,9 @@ export default function App() {
   const [filteredData, setFilteredData] = useState([]);
   const [data] = useState([
     { id: 1, name: 'Aveiro' },
-    { id: 3, name: 'Avenida 5 de Outubro' },
-    { id: 2, name: 'Avenida Vasco Branco' },
-    { id: 3, name: 'Avenida Santa Joana' },
+    { id: 2, name: 'Avenida 5 de Outubro' },
+    { id: 3, name: 'Avenida Vasco Branco' },
+    { id: 4, name: 'Avenida Santa Joana' },
   ]);
 
   const handleSearch = (text) => {
@@ -31,7 +31,7 @@ export default function App() {
 
       <Search_Bar handleSearch={handleSearch} searchQuery={searchQuery} filteredData={filteredData} />
     
-      <Retangulos></Retangulos>
+      <Retangulos ></Retangulos>
 
       <Footer handleOptionPress={handleOptionPress} />
       </View>
@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    paddingTop: 50,
+    paddingTop: 0,
   },
   logo: {
     alignSelf: 'center',
@@ -92,7 +92,10 @@ const styles = StyleSheet.create({
     position:'relative',
     bottom:10,
     overflow: 'hidden', // Para garantir que a imagem não ultrapasse os limites do retângulo
+    shadowColor: '#000',  
+    elevation: 30, 
   },
+
   textRetangulo: {
     marginLeft: 20,
     fontSize: 30,
@@ -114,8 +117,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     height: 55,
-    borderColor: '#e4e4e4',
-    backgroundColor: '#e4e4e4e',
+    borderColor: '#EBEAEA',
+    backgroundColor: '#ffffff',
     borderWidth: 1,
     borderRadius: 20,
     marginHorizontal: 35,
@@ -123,9 +126,12 @@ const styles = StyleSheet.create({
     marginBottom:10,
     paddingHorizontal: 20,
     fontSize: 20,
+    shadowColor: '#000',  
+    elevation: 30, 
   },
   searchIcon: {
-    marginRight: 10,
+    marginRight: 20,
+    
   },
 
   searchInput: {
