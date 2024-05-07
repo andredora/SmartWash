@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { GoogleMap, LoadScript, DirectionsService, DirectionsRenderer } from '@react-google-maps/api';
-import PlacesAutocomplete, { geocodeByAddress, getLatLng } from 'react-google-autocomplete';
+import { usePlacesWidget } from 'react-google-autocomplete'; // Importando hook do react-google-autocomplete
 
 const containerStyle = {
   width: '800px',
@@ -18,26 +18,18 @@ export default function Search() {
   const [origin, setOrigin] = useState(null);
   const [destination, setDestination] = useState(null);
   const [directions, setDirections] = useState(null);
-
-  const onOriginSelect = async (address) => {
-    try {
-      const results = await geocodeByAddress(address);
-      const latLng = await getLatLng(results[0]);
-      setOrigin(latLng);
-    } catch (error) {
-      console.error('Error selecting origin:', error);
-    }
-  };
-
-  const onDestinationSelect = async (address) => {
-    try {
-      const results = await geocodeByAddress(address);
-      const latLng = await getLatLng(results[0]);
-      setDestination(latLng);
-    } catch (error) {
-      console.error('Error selecting destination:', error);
-    }
-  };
+  const { ref: originRef } = usePlacesWidget({
+    apiKey: 'YOUR_API_KEY',
+    onPlaceSelected: (place) => {
+      setOrigin({ lat: place.geometry.location.lat(), lng: place.geometry.location.lng() });
+    },
+  });
+  const { ref: destinationRef } = usePlacesWidget({
+    apiKey: 'YOUR_API_KEY',
+    onPlaceSelected: (place) => {
+      setDestination({ lat: place.geometry.location.lat(), lng: place.geometry.location.lng() });
+    },
+  });
 
   const onDirectionsLoad = (directions) => {
     setDirections(directions);
@@ -45,55 +37,9 @@ export default function Search() {
 
   return (
     <div>
-      <h1>Uber Map</h1>
-      <PlacesAutocomplete
-        onLoadFailed={(error) => console.error('Autocomplete load failed:', error)}
-        onChange={(value) => console.log('Change:', value)}
-        onSelect={onOriginSelect}
-      >
-        {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
-          <div>
-            <input {...getInputProps({ placeholder: 'Enter origin' })} />
-            <div>
-              {loading ? <div>Loading...</div> : null}
-              {suggestions.map((suggestion) => {
-                const style = {
-                  backgroundColor: suggestion.active ? '#41b6e6' : '#fff',
-                };
-                return (
-                  <div {...getSuggestionItemProps(suggestion, { style })}>
-                    {suggestion.description}
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        )}
-      </PlacesAutocomplete>
-      <PlacesAutocomplete
-        onLoadFailed={(error) => console.error('Autocomplete load failed:', error)}
-        onChange={(value) => console.log('Change:', value)}
-        onSelect={onDestinationSelect}
-      >
-        {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
-          <div>
-            <input {...getInputProps({ placeholder: 'Enter destination' })} />
-            <div>
-              {loading ? <div>Loading...</div> : null}
-              {suggestions.map((suggestion) => {
-                const style = {
-                  backgroundColor: suggestion.active ? '#41b6e6' : '#fff',
-                };
-                return (
-                  <div {...getSuggestionItemProps(suggestion, { style })}>
-                    {suggestion.description}
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        )}
-      </PlacesAutocomplete>
+      <h1><b>Mapa do Transporte</b></h1>
+      <input ref={originRef} placeholder="Insira a origem" />
+      <input ref={destinationRef} placeholder="Insira o destino" />
       <LoadScript googleMapsApiKey="YOUR_API_KEY" libraries={libraries}>
         <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={10}>
           {origin && destination && (
@@ -110,5 +56,5 @@ export default function Search() {
         </GoogleMap>
       </LoadScript>
     </div>
-  );
+);
 }
