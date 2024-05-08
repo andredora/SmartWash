@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
+import ReservaPOPup from './ReservaPOPUP';
 
 
 export default function RequestCards() {
@@ -37,15 +38,7 @@ export default function RequestCards() {
         },
         
 
-        {
-            image: "https://media.npr.org/assets/img/2023/09/29/gettyimages-1486049233_wide-3728a037d629dc221128598a3357c2cd0f4c71ec.jpeg?s=1100&c=50&f=jpeg",
-            title: "Clothing Transport",
-            date: "2023-12-02 • 10:45",
-            state: "ENDED",
-            start: "Rua do Carmo, Nº6, Aveiro",
-            end: "Lava Tudo, Aveiro",
-            startend: "true"
-        },
+       <ReservaPOPup />,
 
         {
             image: "https://www.symphony-group.co.uk/wp-content/uploads/Urban-White-Laundry-Room-Main-Shot-3-scaled.jpg",
