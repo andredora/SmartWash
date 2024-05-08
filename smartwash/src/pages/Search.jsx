@@ -36,7 +36,7 @@ export default function Search() {
   };
 
   return (
-    <div style={{ textAlign: 'center', marginTop: '20px' }}>
+    <div className="pb-12"style={{ textAlign: 'center', marginTop: '20px' }}>
       <div style={{fontSize: '24px', marginBottom: '10px'}}><h1><b>Mapa do Transporte</b></h1>
       </div>
       <label style={{marginTop: '2px'}} className="input input-bordered input-info flex items-center gap-2">
