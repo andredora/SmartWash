@@ -56,7 +56,7 @@ export default function Search() {
       </div>
 
       <div style={{ marginTop: '5px', marginBottom: '10px' }}>
-        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" onClick={handleTakeToAnyLaundry}>Levar à Lavandaria Disponível</button>
+        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" onClick={handleTakeToAnyLaundry}>Levar Roupa à Lavandaria Disponível</button>
       </div>
     </div>
   );
