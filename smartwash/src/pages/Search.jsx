@@ -35,7 +35,7 @@ export default function Search() {
 
   return (
     <div style={{ textAlign: 'center', marginTop: '20px' }}>
-      <div style={{fontSize: '24px', marginBottom: '20px'}}><h1><b>Mapa do Transporte</b></h1>
+      <div style={{fontSize: '24px', marginBottom: '10px'}}><h1><b>Mapa do Transporte</b></h1>
       </div>
       <label style={{marginTop: '2px'}} className="input input-bordered input-info flex items-center gap-2">
         <input ref={originRef} type="text" className="grow" placeholder="Insira a Origem" />
