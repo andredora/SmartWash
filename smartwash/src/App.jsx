@@ -10,7 +10,7 @@ import Header from './components/Header'
 function App() {
 
   return (
-    <div className='h-screen max-h-screen p-4 overflow-x-hidden max-w-screen bg-base-100 flex flex-col align-middle justify-between'>
+    <div className='h-screen max-h-screen p-4 overflow-x-hidden max-w-screen bg-base-100 flex flex-col align-middle'>
       <Router>
         <Header />
         <Routes>

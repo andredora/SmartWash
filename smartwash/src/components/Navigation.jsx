@@ -6,7 +6,7 @@ import { faUser } from '@fortawesome/free-solid-svg-icons'
 import { faListUl } from '@fortawesome/free-solid-svg-icons'
 function Navigation() {
     return (
-        <div className="join mx-auto">
+        <div className="join fixed bottom-0 left-0 right-0 bg-white z-50 pt-2 pb-2 flex justify-center">
             <Link to="/home" className="btn btn-primary join-item text-xs">
                 <FontAwesomeIcon icon={faHouse} /> Home
             </Link>

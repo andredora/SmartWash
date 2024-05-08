@@ -1,7 +1,10 @@
+import RequestCards from "../components/RequestCards";
+
+
 export default function MyRequests() {
     return (
-        <div>
-            <h1 className="text-xl">My Requests</h1>
-        </div>
+        <div className="flex flex-col justify-center gap-12 mx-auto">
+            <RequestCards />
+        </div >
       );
 }
