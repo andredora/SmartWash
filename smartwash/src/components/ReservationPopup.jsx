@@ -38,7 +38,7 @@ const ReservationPopup = ({ onClose }) => {
   return (
     <div className="popup" style={{ border: '2px solid #000' }}>
       <div className="popup-inner">
-        <h2 style={{ fontSize: '20px' }}><b>Reservar Lavanderia</b></h2>
+        <h2 style={{ fontSize: '20px' }}><b>Reservar Lavandaria</b></h2>
         <div><label style={{ fontSize: '16px' }}>
           * Quantidade de Roupa:
           <input style={{ color: 'currentcolor', fontSize: '14px', width: '200px' }} type="number" value={quantity} onChange={(e) => setQuantity(e.target.value)} />
@@ -64,7 +64,7 @@ const ReservationPopup = ({ onClose }) => {
         </div>
         <div style={{ width: '440px', margin: '0 auto', marginBottom: '5px', textAlign: 'center' }}>
           <h3 style={{ color: 'currentcolor', fontSize: '16px' }}>
-            * Escolha uma Lavanderia Disponível no Momento:
+            * Escolha uma Lavandaria Disponível no Momento:
           </h3>
           <div>
             <button

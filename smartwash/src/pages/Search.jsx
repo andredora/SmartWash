@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { usePlacesWidget } from 'react-google-autocomplete';
 import ReservationPopup from '../components/ReservationPopup';
 import StaticMap from '../components/StaticMap';
+import ReservationContainer from '../components/ReservationContainer'; // Importe o ReservationContainer
+
 
 
 export default function Search() {
@@ -47,9 +49,8 @@ export default function Search() {
       </label>
     
       <StaticMap /> {/* Adicionando o componente StaticMap aqui */}
-      {showReservationPopup && (
-          <ReservationPopup onClose={() => setShowReservationPopup(false)} />
-        )}
+      <ReservationContainer showReservationPopup={showReservationPopup} onClose={() => setShowReservationPopup(false)} /> {/* Adicione o ReservationContainer aqui */}
+
       <div style={{ marginTop: '10px' }}>
         <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" onClick={handleReserveTrip}>Reservar Viagem</button>
       </div>
