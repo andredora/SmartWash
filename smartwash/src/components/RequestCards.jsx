@@ -38,8 +38,16 @@ export default function RequestCards() {
         },
         
 
-       <ReservaPOPup />,
+        {
+            image: "https://www.symphony-group.co.uk/wp-content/uploads/Urban-White-Laundry-Room-Main-Shot-3-scaled.jpg",
+            title: "Washing Reservation",
+            date: "2024-10-05 • 17:00",
+            state: "RESERVED",
+            where: "A Lavandeira, Aveiro",
+            startend: "false"
 
+
+        },
         {
             image: "https://www.symphony-group.co.uk/wp-content/uploads/Urban-White-Laundry-Room-Main-Shot-3-scaled.jpg",
             title: "Washing Reservation",
