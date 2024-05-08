@@ -6,6 +6,8 @@ import MyRequests from './pages/MyRequests'
 import Profile from './pages/Profile'
 import Navigation from './components/Navigation'
 import Header from './components/Header'
+import FindLaundries from './pages/FindLaundries'
+import Lavandeira from './pages/Lavandeira'
 
 function App() {
 
@@ -19,6 +21,8 @@ function App() {
           <Route path="/search" element={<Search />} />
           <Route path="/myrequests" element={<MyRequests />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/FindLaundries" element={<FindLaundries />} />
+          <Route path="/Lavandeira" element={<Lavandeira />} />
         </Routes>
           <Navigation />
       </Router>
