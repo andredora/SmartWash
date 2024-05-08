@@ -1,3 +1,4 @@
+import { faBorderAll, faBorderStyle } from '@fortawesome/free-solid-svg-icons';
 import React, { useState } from 'react';
 
 const ReservationPopup = ({ onClose }) => {
@@ -22,8 +23,8 @@ const ReservationPopup = ({ onClose }) => {
   };
 
   return (
-    <div className="popup">
-      <div className="popup-inner">
+    <div className="popup" sytle= {{ border: '2px solid #000'}}>
+      <div className="popup-inner" >
         <h2 style={{fontSize: '20px'}}><b>Reservar Lavanderia</b></h2>
         <div><label style={{fontsize: '14px'}}>
           Quantidade de Roupa:
@@ -38,16 +39,16 @@ const ReservationPopup = ({ onClose }) => {
           Horário:
           <input style={{color: 'currentcolor', fontsize: '14px', width: '300px'}} type="time" value={selectedTime} onChange={(e) => setSelectedTime(e.target.value)} />
         </label></div>
-        <h3 style={{color: 'currentcolor', fontsize: '14px', width: '195px'}}>Escolha uma Lavanderia:</h3>
+        <div><h3 style={{color: 'currentcolor', fontsize: '14px', width: '265px'}}>Escolha uma Lavanderia:</h3>
         <ul>
           {/* Render suggested laundries here */}
-          <li onClick={() => handleLaundrySelection('Laundry A')}>Laundry A</li>
-          <li onClick={() => handleLaundrySelection('Laundry B')}>Laundry B</li>
-          <li onClick={() => handleLaundrySelection('Laundry C')}>Laundry C</li>
+          <li onClick={() => handleLaundrySelection('A Lavandeira')}><b>A Lavandeira</b></li>
+          <li onClick={() => handleLaundrySelection('LavEsec lavandaria')}><b>LavEsec lavandaria</b></li>
+          <li onClick={() => handleLaundrySelection('Clean2you')}><b>Clean2you</b></li>
         </ul>
-        <div><button onClick={handleReservation}>Reservar</button>
+        </div><div><button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" style={{marginTop: '5px', marginBottom: '5px'}} onClick={handleReservation}>Reservar</button>
         </div>
-        <div><button onClick={onClose}>Fechar</button>
+        <div><button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" style={{marginTop: '5px', marginBottom: '5px'}} onClick={onClose}>Fechar</button>
       </div>
       </div>
     </div>
