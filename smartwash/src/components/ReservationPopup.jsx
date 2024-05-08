@@ -24,28 +24,31 @@ const ReservationPopup = ({ onClose }) => {
   return (
     <div className="popup">
       <div className="popup-inner">
-        <h2>Reservar Lavanderia</h2>
-        <label>
+        <h2 style={{fontSize: '20px'}}><b>Reservar Lavanderia</b></h2>
+        <div><label style={{fontsize: '14px'}}>
           Quantidade de Roupa:
-          <input type="number" value={quantity} onChange={(e) => setQuantity(e.target.value)} />
+          <input style={{color: 'currentcolor', fontsize: '14px', width: '200px'}} type="number" value={quantity} onChange={(e) => setQuantity(e.target.value)} />
         </label>
-        <label>
-          Número de Lavagens Necessárias:
-          <input type="number" value={washCycles} onChange={(e) => setWashCycles(e.target.value)} />
-        </label>
-        <label>
+        </div>
+        <div><label >
+          Nº de Lavagens Necessárias:
+          <input style={{color: 'currentcolor', fontsize: '14px', width: '160px'}} type="number" value={washCycles} onChange={(e) => setWashCycles(e.target.value)} />
+        </label></div>
+        <div><label>
           Horário:
-          <input type="time" value={selectedTime} onChange={(e) => setSelectedTime(e.target.value)} />
-        </label>
-        <h3>Escolha uma Lavanderia:</h3>
+          <input style={{color: 'currentcolor', fontsize: '14px', width: '300px'}} type="time" value={selectedTime} onChange={(e) => setSelectedTime(e.target.value)} />
+        </label></div>
+        <h3 style={{color: 'currentcolor', fontsize: '14px', width: '195px'}}>Escolha uma Lavanderia:</h3>
         <ul>
           {/* Render suggested laundries here */}
           <li onClick={() => handleLaundrySelection('Laundry A')}>Laundry A</li>
           <li onClick={() => handleLaundrySelection('Laundry B')}>Laundry B</li>
           <li onClick={() => handleLaundrySelection('Laundry C')}>Laundry C</li>
         </ul>
-        <button onClick={handleReservation}>Reservar</button>
-        <button onClick={onClose}>Fechar</button>
+        <div><button onClick={handleReservation}>Reservar</button>
+        </div>
+        <div><button onClick={onClose}>Fechar</button>
+      </div>
       </div>
     </div>
   );
