@@ -13,7 +13,7 @@ export default function HomeCards() {
     ];
 
     return (
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap-3" style={{marginBottom: '30px'}}>
             {cards.map((card, index) => (
                 <div key={index} className={`card w-96 bg-base-100 shadow-xl image-full`}>
                     <figure><img src={card.image} alt="Shoes" /></figure>
