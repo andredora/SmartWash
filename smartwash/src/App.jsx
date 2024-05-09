@@ -10,6 +10,8 @@ import FindLaundries from './pages/FindLaundries'
 import Lavandeira from './pages/Lavandeira'
 import Transport from './pages/Transport'
 import ReserveMachines from './pages/ReserveMachines'
+import Payment from './pages/Payment'
+
 
 
 function App() {
@@ -28,6 +30,8 @@ function App() {
           <Route path="/Lavandeira" element={<Lavandeira />} />
           <Route path="/Transport" element={<Transport />} />
           <Route path="/ReserveMachines" element={<ReserveMachines />} />
+          <Route path="/Payment" element={<Payment />} />
+
 
         </Routes>
           <Navigation />

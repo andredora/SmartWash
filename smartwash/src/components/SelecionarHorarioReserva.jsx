@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+ 
+
 
 const Popup = ({ onClose, onDateTimeSelected }) => {
     const [selectedDate, setSelectedDate] = useState('');
@@ -44,6 +47,8 @@ const SelecionarHorarioReserva = () => {
         setSelectedDateTime({ date, time });
     };
 
+
+
     return (
         <div className='text-center'>
             <button className="btn btn-primary" onClick={handleTogglePopup}>Select Date and Time</button>
@@ -51,6 +56,9 @@ const SelecionarHorarioReserva = () => {
                 <div className="mt-2">
                     <p>Date: {selectedDateTime.date}</p>
                     <p>Time: {selectedDateTime.time}</p>
+                    <Link to={'/Payment'}>
+                    <button className="btn btn-primary">Confirm</button>
+                    </Link>
                 </div>
             )}
             {showPopup && <Popup onClose={handleTogglePopup} onDateTimeSelected={handleDateTimeSelected} />}
