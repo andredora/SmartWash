@@ -99,13 +99,11 @@ const ReservationPopup = ({ onClose }) => {
       </div>
       {/* Adicionando a mensagem de erro */}
       {!isFormValid && <p style={{ color: 'red' }}>* Por favor, preencha todos os campos obrigatórios.</p>}
-      <div>
-        <div>
-            <Link to="/FindLaundries"><button className="bg-blue-800 hover:bg-blue-500 text-white font-bold py-2 px-4 rounded-full" style={{ marginTop: '5px', marginBottom: '5px' }} onClick={handleReservation}>Reservar</button>
-            </Link>
-        </div>
-        <div><button className="bg-blue-800 hover:bg-blue-900 text-white font-bold py-2 px-4 rounded-full" style={{ marginTop: '5px', marginBottom: '5px' }} onClick={onClose}>Fechar</button>
-        </div>
+      <div className="flex justify-between items-center">
+        <Link to="/FindLaundries" className='mx-auto'><button className="bg-blue-800 hover:bg-blue-500 text-white font-bold py-2 px-4 rounded-full mx-auto" style={{ marginTop: '5px', marginBottom: '5px' }} onClick={handleReservation}>Reservar</button>
+        </Link>
+        <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full mx-auto" style={{ marginTop: '5px', marginBottom: '5px' }} onClick={onClose}>Fechar</button>
+
       </div>
     </div>
   );
