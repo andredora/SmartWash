@@ -6,7 +6,7 @@ import ReservationContainer from '../components/ReservationContainer'; // Import
 
 
 
-export default function Search() {
+export default function Transport() {
   const [origin, setOrigin] = useState(null);
   const [destination, setDestination] = useState(null);
   const [directions, setDirections] = useState(null);
@@ -61,3 +61,4 @@ export default function Search() {
     </div>
   );
 }
+

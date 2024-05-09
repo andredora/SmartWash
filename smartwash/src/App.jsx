@@ -1,13 +1,14 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './App.css'
 import Home from './pages/Home'
-import Search from './pages/Search'
+import Search from './pages/Transport'
 import MyRequests from './pages/MyRequests'
 import Profile from './pages/Profile'
 import Navigation from './components/Navigation'
 import Header from './components/Header'
 import FindLaundries from './pages/FindLaundries'
 import Lavandeira from './pages/Lavandeira'
+import Transport from './pages/Transport'
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
           <Route path="/profile" element={<Profile />} />
           <Route path="/FindLaundries" element={<FindLaundries />} />
           <Route path="/Lavandeira" element={<Lavandeira />} />
+          <Route path="/Transport" element={<Transport />} />
         </Routes>
           <Navigation />
       </Router>
