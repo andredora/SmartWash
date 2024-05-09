@@ -1,12 +1,14 @@
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import SelecionarNumMaquinasCards from '../components/SelecionarNumMaquinasCards';
+import SelecionarHorarioReserva from '../components/SelecionarHorarioReserva';
 
 export default function ReserveMachines() {
 
 
     return (
-        <div>
+        <div className='pb-12'>
             <div style={{ position: 'relative' }}>
                 <Link to="/Lavandeira" style={{ position: 'absolute', top: '10px', left: '10px', zIndex: '999' }}> 
                         <button className="btn btn-outline  bg-white rounded-full">
@@ -22,6 +24,9 @@ export default function ReserveMachines() {
                     A Lavandeira   ·   Aberto
                 </text>
             </p>
+
+            <SelecionarNumMaquinasCards />
+            <SelecionarHorarioReserva />
            
         </div>
     );
