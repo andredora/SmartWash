@@ -1,6 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
-import ReservaPOPup from './ReservaPOPUP';
 
 
 export default function RequestCards() {

@@ -25,7 +25,7 @@ export default function Lavandeira() {
             </p>
             <p>
                 <text style={{ fontSize: '1.5rem', marginLeft: '5px', color: '#db5856' }}>
-                    No free Washing Machines
+                    No free Dryers
                 </text>
             </p>
             <div style={{ textAlign: 'center', marginTop: '20px' }}>
