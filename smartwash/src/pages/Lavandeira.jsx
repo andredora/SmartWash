@@ -1,12 +1,20 @@
 import LocalLavandeira from '../assets/LocalizacaoLavandeira.png';
+import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 
 export default function Lavandeira() {
 
 
     return (
         <div>
+            <Link to="/FindLaundries"> {/* Use o Link para navegar para a página "Home" */}
+                    <button className="btn btn-outline">
+                        <FontAwesomeIcon icon={faArrowLeft} />
+                    </button>
+            </Link>
             <figure>
-                <img src={"https://priscilakunenn.com/wp-content/uploads/2021/06/Lavandaria-1-1024x768.jpg"} alt="Shoes" />
+                <img style={{marginTop: '20px'}}src={"https://priscilakunenn.com/wp-content/uploads/2021/06/Lavandaria-1-1024x768.jpg"} alt="Shoes" />
             </figure>
             <p>
                 <text style={{ fontSize: '1.5rem', marginLeft: '5px' }}>

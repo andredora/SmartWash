@@ -3,6 +3,9 @@ import { usePlacesWidget } from 'react-google-autocomplete';
 import ReservationPopup from '../components/ReservationPopup';
 import StaticMap from '../components/StaticMap';
 import ReservationContainer from '../components/ReservationContainer'; // Importe o ReservationContainer
+import { Link } from 'react-router-dom'; // Importe o Link
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 
 
 
@@ -36,6 +39,12 @@ export default function Transport() {
   };
 
   return (
+    <div>
+      <Link to="/home"> {/* Use o Link para navegar para a página "Home" */}
+                    <button className="btn btn-outline">
+                        <FontAwesomeIcon icon={faArrowLeft} />
+                    </button>
+      </Link>
     <div className="pb-12"style={{ textAlign: 'center', marginTop: '20px' }}>
       <div style={{fontSize: '24px', marginBottom: '10px'}}><h1><b>Mapa do Transporte</b></h1>
       </div>
@@ -59,6 +68,7 @@ export default function Transport() {
         <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" onClick={handleTakeToAnyLaundry}>Levar Roupa à Lavandaria Disponível</button>
       </div>
     </div>
+  </div>
   );
 }
 

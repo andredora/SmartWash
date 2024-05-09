@@ -1,18 +1,24 @@
 import SearchBar from "../components/SearchBar";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSliders } from '@fortawesome/free-solid-svg-icons';
+import { faSliders, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import FindLaundriesCards from "../components/FindLaundriesCards";
+import { Link } from "react-router-dom";
+
+
 
 export default function FindLaundries() {
-
 
     
 
     return (
         <div className="flex items-center flex-col gap-3">
         <div className="flex items-center justify-center gap-12 mx-auto">
-
-            <SearchBar />
+        <Link to="/home"> {/* Use o Link para navegar para a página "Home" */}
+                    <button className="btn btn-outline">
+                        <FontAwesomeIcon icon={faArrowLeft} />
+                    </button>
+                </Link>
+                      <SearchBar />
             <button className="btn btn-outline">
                 <FontAwesomeIcon icon={faSliders} />
             </button>
