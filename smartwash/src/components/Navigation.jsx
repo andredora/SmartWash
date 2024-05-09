@@ -10,7 +10,7 @@ function Navigation() {
             <Link to="/home" className="btn btn-primary join-item text-xs">
                 <FontAwesomeIcon icon={faHouse} /> Home
             </Link>
-            <Link to="/search" className="btn btn-secondary join-item text-xs">
+            <Link to="/FindLaundries" className="btn btn-secondary join-item text-xs">
                 <FontAwesomeIcon icon={faMagnifyingGlass} /> Search
             </Link>
             <Link to="/myrequests" className="btn btn-accent join-item text-xs">
