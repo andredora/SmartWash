@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css'; // Importe o estilo padrão do DatePicker
+import { Link } from 'react-router-dom';
+
 
 const ReservationPopup = ({ onClose }) => {
   const [selectedLaundry, setSelectedLaundry] = useState(null);
@@ -98,7 +100,9 @@ const ReservationPopup = ({ onClose }) => {
       {/* Adicionando a mensagem de erro */}
       {!isFormValid && <p style={{ color: 'red' }}>* Por favor, preencha todos os campos obrigatórios.</p>}
       <div>
-        <div><button className="bg-blue-800 hover:bg-blue-500 text-white font-bold py-2 px-4 rounded-full" style={{ marginTop: '5px', marginBottom: '5px' }} onClick={handleReservation}>Reservar</button>
+        <div>
+            <Link to="/FindLaundries"><button className="bg-blue-800 hover:bg-blue-500 text-white font-bold py-2 px-4 rounded-full" style={{ marginTop: '5px', marginBottom: '5px' }} onClick={handleReservation}>Reservar</button>
+            </Link>
         </div>
         <div><button className="bg-blue-800 hover:bg-blue-900 text-white font-bold py-2 px-4 rounded-full" style={{ marginTop: '5px', marginBottom: '5px' }} onClick={onClose}>Fechar</button>
         </div>
