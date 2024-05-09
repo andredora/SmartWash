@@ -9,6 +9,8 @@ import Header from './components/Header'
 import FindLaundries from './pages/FindLaundries'
 import Lavandeira from './pages/Lavandeira'
 import Transport from './pages/Transport'
+import ReserveMachines from './pages/ReserveMachines'
+
 
 function App() {
 
@@ -25,6 +27,8 @@ function App() {
           <Route path="/FindLaundries" element={<FindLaundries />} />
           <Route path="/Lavandeira" element={<Lavandeira />} />
           <Route path="/Transport" element={<Transport />} />
+          <Route path="/ReserveMachines" element={<ReserveMachines />} />
+
         </Routes>
           <Navigation />
       </Router>

@@ -36,11 +36,7 @@ export default function FindLaundriesCards() {
                         
                         <p className="font-bold text-2xl text-primary-content">{card.title}</p>
                         <p className="text-primary-content">{card.distance}</p>                    
-                        <DisponibilitiesLaundries />
-    
-                        <div className="card-actions justify-end">
-                            <Link to={card.link}></Link> 
-                        </div>                    
+                        <DisponibilitiesLaundries />  
     
                     </div>                            
                 </a>

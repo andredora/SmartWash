@@ -8,14 +8,16 @@ export default function Lavandeira() {
 
     return (
         <div>
-            <Link to="/FindLaundries"> {/* Use o Link para navegar para a página "Home" */}
-                    <button className="btn btn-outline">
-                        <FontAwesomeIcon icon={faArrowLeft} />
-                    </button>
-            </Link>
-            <figure>
-                <img style={{marginTop: '20px'}}src={"https://priscilakunenn.com/wp-content/uploads/2021/06/Lavandaria-1-1024x768.jpg"} alt="Shoes" />
-            </figure>
+            <div style={{ position: 'relative' }}>
+                <Link to="/FindLaundries" style={{ position: 'absolute', top: '10px', left: '10px', zIndex: '999' }}> 
+                        <button className="btn btn-outline  bg-white rounded-full">
+                            <FontAwesomeIcon icon={faArrowLeft} />
+                        </button>
+                </Link>
+                <figure>
+                    <img style={{marginTop: '20px'}}src={"https://priscilakunenn.com/wp-content/uploads/2021/06/Lavandaria-1-1024x768.jpg"} alt="Shoes" />
+                </figure>
+            </div>
             <p>
                 <text style={{ fontSize: '1.5rem', marginLeft: '5px' }}>
                     A Lavandeira   ·   Aberto
@@ -36,8 +38,10 @@ export default function Lavandeira() {
                     No free Dryers
                 </text>
             </p>
-            <div style={{ textAlign: 'center', marginTop: '20px' }}>
+            <div style={{ textAlign: 'center', marginTop: '20px' }}>                          
+              <Link to={"/ReserveMachines"}>
                 <button className="btn btn-outline" style={{ fontSize: '1.5rem', width: '300px' }}>Reserve Machines</button>
+                </Link> 
             </div>
             <div style={{ textAlign: 'left', marginTop: '20px' }}>
                 <p style={{ fontSize: '1.5rem', color: '#db5856' }}>
