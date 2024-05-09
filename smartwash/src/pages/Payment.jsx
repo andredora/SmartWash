@@ -1,10 +1,25 @@
+import React, { useState } from 'react';
 import maquinalavar from '../assets/maquinalavar.png';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { faCcVisa } from '@fortawesome/free-brands-svg-icons';
-export default function Lavandeira() {
+import PurchaseSuccessPopup from '../components/PurchaseSuccessPopup'; // Importe o componente PurchaseSuccessPopup aqui
 
+export default function Lavandeira() {
+    const [showSuccessPopup, setShowSuccessPopup] = useState(false);
+    
+    const handleNextClick = () => {
+        // Lógica para avançar para a próxima etapa aqui
+    
+        // Após a lógica bem-sucedida, exibe o pop-up
+        setShowSuccessPopup(true);
+    };
+    
+    const handleClosePopup = () => {
+        // Função para fechar o pop-up
+        setShowSuccessPopup(false);
+    };
 
     return (
         <div className='pb-12'>
@@ -13,7 +28,6 @@ export default function Lavandeira() {
                         <button className="btn btn-outline  bg-white rounded-full">
                             <FontAwesomeIcon icon={faArrowLeft} />
                         </button>
-                        
                 </Link>
             </div>                
             <p style={{ textAlign: 'left', fontSize: '2rem', marginTop: '5px', marginLeft:'70px'}}>Checkout</p>
@@ -43,10 +57,11 @@ export default function Lavandeira() {
                 </button>
             </div>
             <div style={{ display: 'flex', justifyContent: 'center', marginTop:'80px' }}>
-                <button className="btn btn-outline" style={{ backgroundColor:'#779ecb',borderColor:'#779ecb',width: '250px', height:'90px'}}>
+                <button className="btn btn-outline" style={{ backgroundColor:'#779ecb',borderColor:'#779ecb',width: '250px', height:'90px'}} onClick={handleNextClick}>
                     <h1 style={{fontSize:'30px'}}>NEXT</h1>
                 </button>
             </div>
+            {showSuccessPopup && <PurchaseSuccessPopup onClose={handleClosePopup} />} 
 
         </div>
     );
