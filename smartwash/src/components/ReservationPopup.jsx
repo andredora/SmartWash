@@ -1,36 +1,33 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import DatePicker from 'react-datepicker';
-import 'react-datepicker/dist/react-datepicker.css'; // Importe o estilo padrão do DatePicker
+import 'react-datepicker/dist/react-datepicker.css'; 
 import { Link } from 'react-router-dom';
-
 
 const ReservationPopup = ({ onClose }) => {
   const [selectedLaundry, setSelectedLaundry] = useState(null);
   const [selectedTime, setSelectedTime] = useState('');
-  const [selectedDate, setSelectedDate] = useState(new Date()); // Estado para armazenar a data selecionada
+  const [selectedDate, setSelectedDate] = useState(new Date());
   const [quantity, setQuantity] = useState(1);
   const [washCycles, setWashCycles] = useState(1);
-  const [isFormValid, setIsFormValid] = useState(true); // Alterado para true inicialmente
+  const [isFormValid, setIsFormValid] = useState(false);
+
+  useEffect(() => {
+    setIsFormValid(selectedLaundry && selectedTime.trim() !== '' && quantity > 0 && washCycles > 0 && selectedDate);
+  }, [selectedLaundry, selectedTime, quantity, washCycles, selectedDate]);
 
   const handleLaundrySelection = (laundry) => {
     setSelectedLaundry(laundry);
   };
 
   const handleReservation = () => {
-    // Check if all required fields are filled
-    if (selectedLaundry && selectedTime && quantity && washCycles && selectedDate) {
-      // Add logic to make reservation
-      console.log('Reservation made:', {
-        laundry: selectedLaundry,
-        time: selectedTime,
-        quantity,
-        washCycles,
-        date: selectedDate // Adicionado a data na saída do console.log
-      });
-      onClose(); // Close the popup after reservation is made
-    } else {
-      setIsFormValid(false); // Define o estado como falso para mostrar a mensagem de erro
-    }
+    console.log('Reservation made:', {
+      laundry: selectedLaundry,
+      time: selectedTime,
+      quantity,
+      washCycles,
+      date: selectedDate
+    });
+    onClose();
   };
 
   const handleTimeChange = (e) => {
@@ -97,13 +94,29 @@ const ReservationPopup = ({ onClose }) => {
           </div>
         </div>
       </div>
-      {/* Adicionando a mensagem de erro */}
-      {!isFormValid && <p style={{ color: 'red' }}>* Por favor, preencha todos os campos obrigatórios.</p>}
+      {/* Error message */}
+      {!isFormValid && <p style={{ color: 'red', textAlign: 'center' }}>* Por favor, preencha todos os campos obrigatórios.</p>}
       <div className="flex justify-between items-center">
-        <Link to="/FindLaundries" className='mx-auto'><button className="bg-blue-800 hover:bg-blue-500 text-white font-bold py-2 px-4 rounded-full mx-auto" style={{ marginTop: '5px', marginBottom: '5px' }} onClick={handleReservation}>Reservar</button>
-        </Link>
+        {/* Redirect link */}
+        {isFormValid ? (
+          <Link 
+            to="/FindLaundries"
+            className="bg-blue-800 hover:bg-blue-500 text-white font-bold py-2 px-4 rounded-full mx-auto"
+            style={{ marginTop: '5px', marginBottom: '5px', textDecoration: 'none' }}
+            onClick={handleReservation}
+          >
+            Reservar
+          </Link>
+        ) : (
+          <button 
+            className="bg-blue-800 text-white font-bold py-2 px-4 rounded-full mx-auto"
+            style={{ marginTop: '5px', marginBottom: '5px', cursor: 'not-allowed' }} 
+            disabled
+          >
+            Reservar
+          </button>
+        )}
         <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full mx-auto" style={{ marginTop: '5px', marginBottom: '5px' }} onClick={onClose}>Fechar</button>
-
       </div>
     </div>
   );
