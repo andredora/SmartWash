@@ -41,11 +41,11 @@ export default function Transport() {
   return (
     <div>
       <Link to="/home"> {/* Use o Link para navegar para a página "Home" */}
-        <button className="btn btn-outline">
+        <button className="btn btn-outline" style={{ marginLeft: '190px'}}>
           <FontAwesomeIcon icon={faArrowLeft} />
         </button>
       </Link>
-      <div className="pb-12" style={{ textAlign: 'center', marginTop: '20px' }}>
+      <div className="pb-12" style={{ textAlign: 'center', marginTop: '0px' }}>
         <div style={{ fontSize: '24px', marginBottom: '10px' }}><h1><b>Mapa do Transporte</b></h1>
         </div>
         < InputsTrans originRef={originRef} destinationRef={destinationRef} onDirectionsLoad={onDirectionsLoad} /> {/* Adicione o componente InputsTrans aqui */}
