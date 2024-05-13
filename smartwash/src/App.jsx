@@ -11,6 +11,7 @@ import Lavandeira from './pages/Lavandeira'
 import Transport from './pages/Transport'
 import ReserveMachines from './pages/ReserveMachines'
 import Payment from './pages/Payment'
+import EscolhaTransporte from './pages/EscolhaTransporte'
 
 
 
@@ -28,10 +29,10 @@ function App() {
           <Route path="/profile" element={<Profile />} />
           <Route path="/FindLaundries" element={<FindLaundries />} />
           <Route path="/Lavandeira" element={<Lavandeira />} />
+          <Route path="/EscolhaTransporte" element={<EscolhaTransporte />} />
           <Route path="/Transport" element={<Transport />} />
           <Route path="/ReserveMachines" element={<ReserveMachines />} />
           <Route path="/Payment" element={<Payment />} />
-
 
         </Routes>
           <Navigation />

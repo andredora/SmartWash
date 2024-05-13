@@ -12,7 +12,7 @@ export default function HomeCards() {
             image: "https://automaticlaundry.com/wp-content/uploads/sites/2/2017/07/Automatic3033-1_lowres.jpg",
             title: "Find a Transporter",
             buttonText: "Click to Find Transporters",
-            link: "/Transport"
+            link: "/EscolhaTransporte"
         },
     ];
 
