@@ -14,10 +14,10 @@ function Navigation() {
                 <FontAwesomeIcon icon={faMagnifyingGlass} /> Search
             </Link>
             <Link to="/myrequests" className="btn btn-accent join-item text-xs">
-                <FontAwesomeIcon icon={faUser} /> Requests
+                <FontAwesomeIcon icon={faListUl} /> Requests
             </Link>
             <Link to="/profile" className="btn btn-neutral join-item text-xs">
-                <FontAwesomeIcon icon={faListUl} /> Profile
+                <FontAwesomeIcon icon={faUser} /> Profile
             </Link>
         </div>
     );

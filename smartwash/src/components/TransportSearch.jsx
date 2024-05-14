@@ -1,32 +1,35 @@
 import React, { useState } from 'react';
 
-const TransportSearch = () => {
+const TransportSearch = ({ onSearchChange }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [showAutocomplete, setShowAutocomplete] = useState(false);
 
   const handleInputChange = (event) => {
     const value = event.target.value;
     setSearchTerm(value);
-    if (value.toLowerCase() === 'a') {
-      setShowAutocomplete(true);
-    } else if (value.toLowerCase() === 'l') {
+    if (value.trim() !== "" && 'DETI'.toLowerCase().includes(value.toLowerCase())) {
       setShowAutocomplete(true);
     } else {
       setShowAutocomplete(false);
     }
+    // Passa o termo de pesquisa atualizado para o componente pai
+    onSearchChange(value);
   };
 
   const handleAutocompleteClick = () => {
-    window.location.href = "/lavandeira";
+    setSearchTerm('DETI - Departamento de Eletrónica, Telecomunicações e Informática');
+    setShowAutocomplete(false); // Fechar o autocomplete após clicar em uma opção
+    // Passa o termo de pesquisa atualizado para o componente pai
+    onSearchChange('DETI - Departamento de Eletrónica, Telecomunicações e Informática');
   };
 
   return (
     <div style={{ marginBottom: '-30px', marginTop: '-30px'}}>
-      <label  className="input input-bordered input-info flex items-center gap-2">
+      <label className="input input-bordered input-info flex items-center gap-2">
         <input 
           type="text" 
           className="grow" 
-          placeholder="Enter Your Location" 
+          placeholder="Enter Pickup Location" 
           value={searchTerm}
           onChange={handleInputChange}
         />
@@ -36,7 +39,7 @@ const TransportSearch = () => {
       </label>
       {showAutocomplete && (
         <div onClick={handleAutocompleteClick}>
-          A Lavandeira
+          DETI - Departamento de Eletrónica, Telecomunicações e Informática
         </div>
       )}
     </div>

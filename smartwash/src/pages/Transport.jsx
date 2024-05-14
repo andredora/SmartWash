@@ -42,23 +42,22 @@ export default function Transport() {
 
   return (
     <div>
-      <Link to="/home"> {/* Use o Link para navegar para a página "Home" */}
-        <button className="btn btn-outline" style={{ marginLeft: '190px'}}>
+      <Link to="/reservemachinestransport"> {/* Use o Link para navegar para a página "Home" */}
+        <button className="btn btn-outline" style={{ marginLeft: '190px' }}>
           <FontAwesomeIcon icon={faArrowLeft} />
         </button>
       </Link>
       <div className="pb-12" style={{ textAlign: 'center', marginTop: '0px' }}>
-        <div style={{ fontSize: '24px', marginBottom: '10px' }}><h1><b>Mapa do Transporte</b></h1>
-        </div>
+      
         < InputsTrans originRef={originRef} destinationRef={destinationRef} onDirectionsLoad={onDirectionsLoad} /> {/* Adicione o componente InputsTrans aqui */}
 
         <StaticMap /> {/* Adicionando o componente StaticMap aqui */}
         <ReservationContainer showReservationPopup={showReservationPopup} onClose={() => setShowReservationPopup(false)} /> {/* Adicione o ReservationContainer aqui */}
-    <Link to="/Payment">
-        <div style={{ marginTop: '10px' }}>
-          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" >Confirmar</button>
-        </div>
-    </Link>
+        <Link to="/paymenttransport">
+          <div style={{ marginTop: '10px' }}>
+            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" >Confirmar</button>
+          </div>
+        </Link>
       </div>
     </div>
   );

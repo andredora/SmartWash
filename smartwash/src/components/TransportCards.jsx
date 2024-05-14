@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import "../App.css";
 
 export default function TransportCards({ onSelect }) {
   const [selectedOption, setSelectedOption] = useState(null);
@@ -20,21 +21,21 @@ export default function TransportCards({ onSelect }) {
   ];
 
   return (
-    <div className="flex flex-col gap-3">
+    <div className="flex flex-col gap-5">
       {cards.map((card, index) => (
-        <div key={index} className="card w-96 bg-base-100 shadow-xl image-full">
-          <figure><img src={card.image} alt={card.title} /></figure>
+        <div key={index} className={"card w-96 h-56 shadow-xl image-full"}>
+          <figure style={{ height: '100%', width: '100%' }}><img src={card.image} alt={card.title}  style={{ objectFit: 'cover', height: '100%', width: '100%' }} /></figure>
           <div className="card-body">
             <p className="font-bold text-2xl text-primary-content">{card.title}</p>
             <div className="card-actions justify-end">
               <label className="flex items-center gap-2">
                 <div className="flex items-center gap-3">
-                  <input 
-                    type="radio" 
-                    name="cardSelection" 
-                    checked={selectedOption === index} 
+                  <input
+                    className='rounded-checkbox-a'
+                    type="checkbox"
+                    name="cardSelection"
                     style={{ width: '40px', height: '40px' }} // Tamanho do botão
-                    onChange={() => handleOptionChange(index)} 
+                    onChange={() => handleOptionChange(index)}
                   />
                 </div>
               </label>

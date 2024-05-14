@@ -25,7 +25,7 @@ export default function Lavandeira() {
     return (
         <div className='pb-12'>
             <div style={{ position: 'relative' }}>
-                <Link to="/ReserveMachinesTransport" style={{ position: 'absolute', top: '10px', left: '10px', zIndex: '999' }}> 
+                <Link to="/transport" style={{ position: 'absolute', top: '10px', left: '10px', zIndex: '999' }}> 
                         <button className="btn btn-outline  bg-white rounded-full">
                             <FontAwesomeIcon icon={faArrowLeft} />
                         </button>

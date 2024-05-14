@@ -14,7 +14,6 @@ import Payment from './pages/Payment';
 import EscolhaTransporte from './pages/EscolhaTransporte';
 import LaundriesTransport from './pages/LaundriesTransport'; // Importe a página LaundriesTransport
 import LavandeiraTransport from './pages/LavandeiraTransport';
-import TransportMaquinasReserved from './pages/TransporteMaquinasReserved';
 import PaymentTransport from './pages/PaymentTransport';
 import ReserveMachinesTransport from './pages/ReserveMachinesTransport';
 
@@ -38,7 +37,6 @@ function App() {
           <Route path="/PaymentTransport" element={<PaymentTransport />} />
           <Route path="/LaundriesTransport" element={<LaundriesTransport />} /> {/* Adicione esta linha */}
           <Route path="/LavandeiraTransport" element={<LavandeiraTransport />} />
-          <Route path="/TransporteMaquinasReserved" element={<TransportMaquinasReserved />} />
           <Route path="/ReserveMachinesTransport" element={<ReserveMachinesTransport />} />
         </Routes>
         <Navigation />

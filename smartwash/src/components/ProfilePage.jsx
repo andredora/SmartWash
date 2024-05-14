@@ -22,7 +22,7 @@ export default function ProfilePage() {
                     </div>
                     <div className="flex items-center text-gray-600">
                         <FontAwesomeIcon icon={faCreditCard} className="mr-2" />
-                        <p>**** **** **** 1234</p>
+                        <p>VISA **** **** **** 1234</p>
                     </div>
                 </div>
                 <div>

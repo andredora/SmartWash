@@ -60,7 +60,7 @@ export default function RequestCards() {
     ];
 
     return (
-        <div className="flex flex-col gap-5 pb-16 pt-5" >
+        <div className="flex flex-col gap-5 pb-16" >
             {cards.map((card, index) => (
                 <div key={index} className={`card w-96 h-56 shadow-xl image-full`}>
                     <figure style={{ height: '100%', width: '100%' }}><img src={card.image} alt="Shoes" style={{ objectFit: 'cover', height: '100%', width: '100%' }} /></figure>

@@ -7,10 +7,7 @@ const SearchBar = () => {
   const handleInputChange = (event) => {
     const value = event.target.value;
     setSearchTerm(value);
-    if (value.toLowerCase() === 'a') {
-      setShowAutocomplete(true);
-
-    } else if (value.toLowerCase() === 'l') {
+    if (value != "" && value != " " && 'a lavandeira'.toLowerCase().includes(value.toLowerCase()) ) {
       setShowAutocomplete(true);
     }
     else {

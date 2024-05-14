@@ -56,7 +56,7 @@ const SelecionarHorarioReservaTransport = () => {
                 <div className="mt-2">
                     <p>Date: {selectedDateTime.date}</p>
                     <p>Time: {selectedDateTime.time}</p>
-                    <Link to={'/PaymentTransport'}>
+                    <Link to={'/transport'}>
                     <button className="btn btn-primary">Confirm</button>
                     </Link>
                 </div>
