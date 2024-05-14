@@ -26,7 +26,7 @@ const TransportSearch = () => {
         <input 
           type="text" 
           className="grow" 
-          placeholder="Coloque a sua Localização" 
+          placeholder="Enter Your Location" 
           value={searchTerm}
           onChange={handleInputChange}
         />

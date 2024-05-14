@@ -30,15 +30,15 @@ export default function TransportCards() {
             <p className="font-bold text-2xl text-primary-content">{card.title}</p>
             <div className="card-actions justify-end">
               <label className="flex items-center gap-2">
+                
                 <input 
                   type="radio" 
                   name="cardSelection" 
                   checked={selectedOption === index} 
+                  // tamanho do botão
+                  style={{ width: '40px', height: '40px' }}
                   onChange={() => handleOptionChange(index)} 
                 />
-                <Link to={card.link}>
-                  <button className="btn btn-primary">{card.buttonText}</button>
-                </Link>
               </label>
             </div>
           </div>
