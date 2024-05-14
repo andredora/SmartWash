@@ -21,12 +21,12 @@ const TransportSearch = () => {
   };
 
   return (
-    <div>
-      <label style={{ marginTop: '0px' }} className="input input-bordered input-info flex items-center gap-2">
+    <div style={{ marginBottom: '-30px', marginTop: '-30px'}}>
+      <label  className="input input-bordered input-info flex items-center gap-2">
         <input 
           type="text" 
           className="grow" 
-          placeholder="Search" 
+          placeholder="Coloque a sua Localização" 
           value={searchTerm}
           onChange={handleInputChange}
         />

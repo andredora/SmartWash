@@ -11,14 +11,12 @@ export default function TransportCards() {
   const cards = [
     {
       image: "https://media.licdn.com/dms/image/C4E1BAQGjRfhAqeJtsQ/company-background_10000/0/1584652242635/automatic_laundry_services_co_inc__cover?e=2147483647&v=beta&t=cawK16nCqHV5_SElkfAuLActGBXpBJYW63zwDAS_GCo",
-      title: "Home to Laundry",
-      buttonText: "Click to See Laundries Near You",
+      title: "-- > Home to Laundry",
       link: "/FindLaundries"
     },
     {
       image: "https://automaticlaundry.com/wp-content/uploads/sites/2/2017/07/Automatic3033-1_lowres.jpg",
-      title: "Laundry to Home",
-      buttonText: "Click to Find Transporters",
+      title: "-- > Laundry to Home",
       link: "/EscolhaTransporte"
     },
   ];
