@@ -14,10 +14,10 @@ export default function EscolhaTransporte() {
   };
 
   const handleNextClick = () => {
-    if (selectedOption === 1) {
+    if (selectedOption === 1 || selectedOption === 0) {
       navigate('/LaundriesTransport');
     } else {
-      console.log("O segundo card não está selecionado.");
+      alert("O segundo card não está selecionado.");
     }
   };
 
@@ -28,19 +28,10 @@ export default function EscolhaTransporte() {
           <FontAwesomeIcon icon={faArrowLeft} />
         </button>
       </Link>
-      <div style={{ fontSize: '21px', marginBottom: '0px', marginLeft: '55px', marginTop: '-30px' }}>
-        <h1><b>Choose the Type of Transport</b></h1>
-      </div>
       <TransportSearch />
       <TransportCards onSelect={handleOptionChange} />
       <div style={{ marginTop: '-30px', marginBottom: '30px', marginLeft: 'auto',marginRight:'auto' }}>
-        <button
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
-          onClick={handleNextClick} style={{ width: '120px', height: '70px', fontSize: '24px' }} // Ajuste para aumentar o tamanho do botão
-
-        >
-          Next
-        </button>
+             <button className="btn btn-primary" onClick={handleNextClick}>Select Date and Time</button>
       </div>
     </div>
   );

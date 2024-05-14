@@ -1,9 +1,8 @@
 import SearchBar from "../components/SearchBar";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSliders, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
-import FindLaundriesCards from "../components/FindLaundriesCards";
+import FindLaundriesCardsTransport from "../components/FindLaundriesCardsTransport";
 import { Link } from "react-router-dom";
-import React from 'react';
 
 
 export default function LaundriesTransport() {
@@ -27,7 +26,7 @@ export default function LaundriesTransport() {
                 <p style={{ fontSize: '1.5rem', marginBottom: '10px' }}>Recent Search</p>
                 <p style={{ fontSize: '1.5rem', opacity: '0' }}>wdfcwrcfescwdfr</p>
             </div>
-            <FindLaundriesCards />
+            <FindLaundriesCardsTransport />
         </div>
     );
 }

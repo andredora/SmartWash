@@ -39,7 +39,7 @@ export default function Lavandeira() {
                 </text>
             </p>
             <div style={{ textAlign: 'center', marginTop: '20px' }}>                          
-              <Link to={"/ReserveMachines"}>
+              <Link to={"/ReserveMachinesTransport"}>
                 <button className="btn btn-outline" style={{ fontSize: '1.5rem', width: '300px' }}>Reserve Machines</button>
                 </Link> 
             </div>

@@ -1,4 +1,3 @@
-import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Home from './pages/Home';
@@ -16,6 +15,8 @@ import EscolhaTransporte from './pages/EscolhaTransporte';
 import LaundriesTransport from './pages/LaundriesTransport'; // Importe a página LaundriesTransport
 import LavandeiraTransport from './pages/LavandeiraTransport';
 import TransportMaquinasReserved from './pages/TransporteMaquinasReserved';
+import PaymentTransport from './pages/PaymentTransport';
+import ReserveMachinesTransport from './pages/ReserveMachinesTransport';
 
 function App() {
   return (
@@ -34,9 +35,11 @@ function App() {
           <Route path="/Transport" element={<Transport />} />
           <Route path="/ReserveMachines" element={<ReserveMachines />} />
           <Route path="/Payment" element={<Payment />} />
+          <Route path="/PaymentTransport" element={<PaymentTransport />} />
           <Route path="/LaundriesTransport" element={<LaundriesTransport />} /> {/* Adicione esta linha */}
           <Route path="/LavandeiraTransport" element={<LavandeiraTransport />} />
           <Route path="/TransporteMaquinasReserved" element={<TransportMaquinasReserved />} />
+          <Route path="/ReserveMachinesTransport" element={<ReserveMachinesTransport />} />
         </Routes>
         <Navigation />
       </Router>

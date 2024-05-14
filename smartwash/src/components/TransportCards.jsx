@@ -10,12 +10,12 @@ export default function TransportCards({ onSelect }) {
 
   const cards = [
     {
-      image: "https://media.licdn.com/dms/image/C4E1BAQGjRfhAqeJtsQ/company-background_10000/0/1584652242635/automatic_laundry_services_co_inc__cover?e=2147483647&v=beta&t=cawK16nCqHV5_SElkfAuLActGBXpBJYW63zwDAS_GCo",
-      title: "-- > Home to Laundry",
+      image: "https://st.depositphotos.com/2249091/4966/i/950/depositphotos_49666183-stock-photo-man-putting-suitcases-in-car.jpg",
+      title: "Home to Laundry",
     },
     {
-      image: "https://automaticlaundry.com/wp-content/uploads/sites/2/2017/07/Automatic3033-1_lowres.jpg",
-      title: "-- > Laundry to Home",
+      image: "https://images.inc.com/uploaded_files/image/1920x1080/getty_851372958_377242.jpg",
+      title: "Laundry to Home",
     },
   ];
 
