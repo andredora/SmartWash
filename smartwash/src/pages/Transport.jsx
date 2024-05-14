@@ -8,7 +8,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import InputsTrans from '../components/InputsTrans';
 
-
 export default function Transport() {
   const [origin, setOrigin] = useState(null);
   const [destination, setDestination] = useState(null);
@@ -28,11 +27,14 @@ export default function Transport() {
   const onDirectionsLoad = (directions) => {
     setDirections(directions);
   };
-
-  const handleReserveTrip = () => {
-    setShowReservationPopup(true); // Mostrar o popup quando clicar em reservar viagem
+  const handleNextClick = () => {
+    if (selectedOption === 1) {
+      navigate('/Payment');
+    } else {
+      console.log("O segundo card não está selecionado.");
+    }
   };
-
+  
   const handleTakeToAnyLaundry = () => {
     // Add logic to take clothes to any available laundry
     console.log('Taking clothes to any available laundry...');
@@ -52,10 +54,11 @@ export default function Transport() {
 
         <StaticMap /> {/* Adicionando o componente StaticMap aqui */}
         <ReservationContainer showReservationPopup={showReservationPopup} onClose={() => setShowReservationPopup(false)} /> {/* Adicione o ReservationContainer aqui */}
-
+    <Link to="/Payment">
         <div style={{ marginTop: '10px' }}>
-          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" onClick={handleReserveTrip}>Confirmar</button>
+          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" >Confirmar</button>
         </div>
+    </Link>
       </div>
     </div>
   );

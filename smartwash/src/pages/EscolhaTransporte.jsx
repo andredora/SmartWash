@@ -15,7 +15,7 @@ export default function EscolhaTransporte() {
 
   const handleNextClick = () => {
     if (selectedOption === 1) {
-      navigate('/FindLaundries');
+      navigate('/LaundriesTransport');
     } else {
       console.log("O segundo card não está selecionado.");
     }

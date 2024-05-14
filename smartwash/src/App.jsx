@@ -1,22 +1,23 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import './App.css'
-import Home from './pages/Home'
-import Search from './pages/Transport'
-import MyRequests from './pages/MyRequests'
-import Profile from './pages/Profile'
-import Navigation from './components/Navigation'
-import Header from './components/Header'
-import FindLaundries from './pages/FindLaundries'
-import Lavandeira from './pages/Lavandeira'
-import Transport from './pages/Transport'
-import ReserveMachines from './pages/ReserveMachines'
-import Payment from './pages/Payment'
-import EscolhaTransporte from './pages/EscolhaTransporte'
-
-
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import './App.css';
+import Home from './pages/Home';
+import Search from './pages/Transport';
+import MyRequests from './pages/MyRequests';
+import Profile from './pages/Profile';
+import Navigation from './components/Navigation';
+import Header from './components/Header';
+import FindLaundries from './pages/FindLaundries';
+import Lavandeira from './pages/Lavandeira';
+import Transport from './pages/Transport';
+import ReserveMachines from './pages/ReserveMachines';
+import Payment from './pages/Payment';
+import EscolhaTransporte from './pages/EscolhaTransporte';
+import LaundriesTransport from './pages/LaundriesTransport'; // Importe a página LaundriesTransport
+import LavandeiraTransport from './pages/LavandeiraTransport';
+import TransportMaquinasReserved from './pages/TransporteMaquinasReserved';
 
 function App() {
-
   return (
     <div className='h-screen max-h-screen p-4 overflow-x-hidden max-w-screen bg-base-100 flex flex-col align-middle'>
       <Router>
@@ -33,12 +34,14 @@ function App() {
           <Route path="/Transport" element={<Transport />} />
           <Route path="/ReserveMachines" element={<ReserveMachines />} />
           <Route path="/Payment" element={<Payment />} />
-
+          <Route path="/LaundriesTransport" element={<LaundriesTransport />} /> {/* Adicione esta linha */}
+          <Route path="/LavandeiraTransport" element={<LavandeiraTransport />} />
+          <Route path="/TransporteMaquinasReserved" element={<TransportMaquinasReserved />} />
         </Routes>
-          <Navigation />
+        <Navigation />
       </Router>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
