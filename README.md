@@ -9,6 +9,7 @@
 
 ```
   go to ./smartwash/src
+
   > npm i
 ```
  
