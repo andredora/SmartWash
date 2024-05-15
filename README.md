@@ -30,7 +30,7 @@
   > npm run preview
 
   then, (most probably) on the right side of your browser search bar
-  press the "Open with" (a square with an arrow)
+  press "Open with" (a square with an arrow)
   select "React-vite-app"
   press "Open"
 ```
