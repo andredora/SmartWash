@@ -29,4 +29,4 @@
   > npm run build
   > npm run preview
 ```
-Then, (most probably) on the right side of your browser search bar, press the "Open with" (a square with an arrow), select "React-vite-app" and press "Open"
+-- Then, (most probably) on the right side of your browser search bar, press the "Open with" (a square with an arrow), select "React-vite-app" and press "Open"
