@@ -17,7 +17,7 @@ export default function Lavandeira() {
     };
     
     const handleClosePopup = () => {
-        // Função para fechar o pop-up
+        // Função para Close o pop-up
         setShowSuccessPopup(false);
     };
 

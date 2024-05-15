@@ -18,7 +18,7 @@ const TransportSearch = ({ onSearchChange }) => {
 
   const handleAutocompleteClick = () => {
     setSearchTerm('DETI - Departamento de Eletrónica, Telecomunicações e Informática');
-    setShowAutocomplete(false); // Fechar o autocomplete após clicar em uma opção
+    setShowAutocomplete(false); // Close o autocomplete após clicar em uma opção
     // Passa o termo de pesquisa atualizado para o componente pai
     onSearchChange('DETI - Departamento de Eletrónica, Telecomunicações e Informática');
   };

@@ -55,7 +55,7 @@ export default function Transport() {
         <ReservationContainer showReservationPopup={showReservationPopup} onClose={() => setShowReservationPopup(false)} /> {/* Adicione o ReservationContainer aqui */}
         <Link to="/paymenttransport">
           <div style={{ marginTop: '10px' }}>
-            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" >Confirmar</button>
+            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" >Confirm</button>
           </div>
         </Link>
       </div>
