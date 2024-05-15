@@ -54,9 +54,8 @@ export default function EscolhaTransporte() {
         )}
         <button 
           className="btn btn-primary" 
-          onClick={handleNextClick}
-        >
-          Selecionar Lavandaria
+          onClick={handleNextClick}>
+          Select Laundry
         </button>
         
        
