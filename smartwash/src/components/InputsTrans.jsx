@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 const InputsTrans = () => {
   const [origem, setOrigem] = useState('A Lavandeira');
-  const [destino, setDestino] = useState('DETI - Departamento de Eletrónica, Telecomunicações e Informática');
+  const [destino, setDestino] = useState('DETI - Departamento de Ele...');
 
   return (
     <div style={{ width: '100%', maxWidth: '500px', margin: '0 auto' }}>

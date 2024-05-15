@@ -43,7 +43,7 @@ export default function Transport() {
   return (
     <div>
       <Link to="/reservemachinestransport"> {/* Use o Link para navegar para a página "Home" */}
-        <button className="btn btn-outline" style={{ marginLeft: '190px' }}>
+        <button className="btn btn-outline">
           <FontAwesomeIcon icon={faArrowLeft} />
         </button>
       </Link>
