@@ -7,7 +7,7 @@ export default function RequestCards() {
         {
             image: "https://media.architecturaldigest.com/photos/63f69b6897deb1555f3e54cc/master/w_1600%2Cc_limit/EEAAO_14036.jpg",
             title: "Clothing Transport",
-            date: "2024-09-05 • 12:00",
+            date: "09-05-2024 • 12:00",
             state: "ONGOING",
             start: "DETI, Universidade de Aveiro",
             end: "Lava Monstro, Aveiro",
@@ -19,7 +19,7 @@ export default function RequestCards() {
         {
             image: "https://www.symphony-group.co.uk/wp-content/uploads/Urban-White-Laundry-Room-Main-Shot-3-scaled.jpg",
             title: "Washing Reservation",
-            date: "2024-10-05 • 17:00",
+            date: "10-05-2024 • 17:00",
             state: "RESERVED",
             where: "A Lavandeira, Aveiro",
             startend: "false"
@@ -30,7 +30,7 @@ export default function RequestCards() {
         {
             image: "https://media.architecturaldigest.com/photos/63f69b6897deb1555f3e54cc/master/w_1600%2Cc_limit/EEAAO_14036.jpg",
             title: "Washing Reservation",
-            date: "2024-01-02 • 19:30",
+            date: "02-01-2024 • 19:30",
             state: "ENDED",
             where: "Lava Monstro, Aveiro",
             startend: "false"
@@ -40,8 +40,8 @@ export default function RequestCards() {
         {
             image: "https://www.symphony-group.co.uk/wp-content/uploads/Urban-White-Laundry-Room-Main-Shot-3-scaled.jpg",
             title: "Washing Reservation",
-            date: "2024-10-05 • 17:00",
-            state: "RESERVED",
+            date: "02-12-2023 • 17:00",
+            state: "ENDED",
             where: "A Lavandeira, Aveiro",
             startend: "false"
 
@@ -50,7 +50,7 @@ export default function RequestCards() {
         {
             image: "https://www.symphony-group.co.uk/wp-content/uploads/Urban-White-Laundry-Room-Main-Shot-3-scaled.jpg",
             title: "Washing Reservation",
-            date: "2012-12-12 • 12:12",
+            date: "12-12-2012 • 12:12",
             state: "CANCELLED",
             where: "A Lavandeira, Aveiro",
             startend: "false"

@@ -58,7 +58,7 @@ export default function Lavandeira() {
             </div>
             <div style={{ display: 'flex', justifyContent: 'center', marginTop:'80px' }}>
                 <button className="btn btn-outline" style={{ backgroundColor:'#779ecb',borderColor:'#779ecb',width: '250px', height:'90px'}} onClick={handleNextClick}>
-                    <h1 style={{fontSize:'30px'}}>NEXT</h1>
+                    <h1 style={{fontSize:'30px'}}>PAY</h1>
                 </button>
             </div>
             {showSuccessPopup && <PurchaseSuccessPopup onClose={handleClosePopup} />} 
