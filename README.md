@@ -20,6 +20,8 @@
   go to ./smartwash/src
 
   > npm run dev
+
+  ! - remember to select the view window as a mobile phone - !
 ```
 
 2. Runing Interface in final mode:
@@ -34,4 +36,6 @@
   press "Open with" (a square with an arrow)
   select "React-vite-app"
   press "Open"
+
+  ! - remember to select the view window as a mobile phone - !
 ```
