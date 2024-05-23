@@ -16,7 +16,7 @@ export default function FindLaundriesCards() {
             title: "A Lavandeira",
             distance: "2.5 km",
             image: "https://priscilakunenn.com/wp-content/uploads/2021/06/Lavandaria-1-1024x768.jpg",
-            link: "/Lavandeira",
+            link: "/LavandeiraTransport",
             hasDryers: 'nao',
 
         },
