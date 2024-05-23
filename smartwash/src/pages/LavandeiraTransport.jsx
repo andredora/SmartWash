@@ -20,7 +20,7 @@ export default function Lavandeira() {
             </div>
             <p>
                 <text style={{ fontSize: '1.5rem', marginLeft: '5px' }}>
-                    A Lavandeira   ·   Aberto
+                    A Lavandeira   ·   Open
                 </text>
             </p>
             <p>
